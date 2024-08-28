@@ -1,0 +1,122 @@
+/* Set up */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-image: linear-gradient(rgba(9, 9, 9, 0.557), rgba(0, 0, 0, 0.75)), url(sdd.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-image: linear-gradient(rgba(9, 9, 9, 0.557), rgba(0, 0, 0, 0.75)), url(sD.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.bod {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-image: linear-gradient(rgba(9, 9, 9, 0.557), rgba(0, 0, 0, 0.75)), url(sd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.097);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    position: relative; /* Ensure container is relative for absolute positioning of buttons */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.button-container {
+    position: relative; /* Container to hold buttons */
+    height: 100px; /* Ensure enough height */
+}
+
+input[type="button"] {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    position: absolute; /* Ensure buttons are absolutely positioned */
+}
+
+#yes-button {
+    left: 50%;
+    transform: translateX(-120%);
+}
+
+#no-button {
+    left: 50%;
+    transform: translateX(20%);
+    transition: all 0.3s ease;
+}
+
+
+.button-container {
+    text-align: center;
+}
+
+#next-button {
+    background: linear-gradient(45deg, #05d9fa, #3f5f59);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#next-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #72d80c, #98bc71); /* Nieuwe hover-kleuren */
+}
+
+#next-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
