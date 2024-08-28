@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me?</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bod">
+
+    <audio  autoplay loop>
+        <source src="Alphaville - Forever Young ( Video Lyrics ).mp3">
+    </audio>
+
+    <div class="container">
+        <h1>Wil Je Mijn Vriendin Worden ?</h1>
+        <div class="button-container">
+            <a href="eind.html"><input id="yes-button" type="button" value="YES" onclick="clickYesButton()"></a>
+            <input id="no-button" type="button" value="NO" onmouseover="hoverNoButton(event)">
+        </div>
+    </div>
+    <script >
+        function hoverNoButton(event) {
+    const noButton = document.getElementById('no-button');
+    const container = noButton.parentElement;
+
+    // Get dimensions of the button and the container
+    const buttonWidth = noButton.offsetWidth;
+    const buttonHeight = noButton.offsetHeight;
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
+
+    // Define a safe distance from the cursor
+    const safeDistance = 100;
+
+    let x, y, maxX, maxY;
+
+    // Ensure the button stays within container bounds
+    maxX = containerWidth - buttonWidth;
+    maxY = containerHeight - buttonHeight;
+
+    // Repeat until a valid position is found
+    let isValidPosition = false;
+
+    while (!isValidPosition) {
+        // Randomly calculate new x and y positions within the container's range
+        x = Math.random() * maxX;
+        y = Math.random() * maxY;
+
+        // Check if the new position is far enough from the cursor
+        const cursorX = event.clientX - container.getBoundingClientRect().left;
+        const cursorY = event.clientY - container.getBoundingClientRect().top;
+
+        const dx = cursorX - (x + buttonWidth / 2);
+        const dy = cursorY - (y + buttonHeight / 2);
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        // Validate if the position is far enough from the cursor
+        if (distance > safeDistance) {
+            isValidPosition = true;
+        }
+    }
+
+    // Apply the new position to the button
+    noButton.style.position = 'absolute'; // Ensure position is absolute
+    noButton.style.left = `${x}px`;
+    noButton.style.top = `${y}px`;
+}
+    </script>
+</body>
+</html>
+
