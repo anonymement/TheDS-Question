@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="blocked">
+    
+    <form action="fixed.html" class="passform" onsubmit="return passcheck()">
+        <input type="password" required id="pass1" placeholder="Password">
+        
+        <input type="submit">
+    </form>
+
+    <script>
+        var password = "dualeoverzanten";
+
+        function passcheck(){
+            if(document.getElementById('pass1').value != password) {
+                alert('Verkeerde wachtwoord, probeer nogmaals.')
+                return false;
+            }
+            if(document.getElementById('pass1').value == password) {
+                alert('Juiste wachtwoord');
+            }
+        }
+    </script>
+</body>
+</html>
