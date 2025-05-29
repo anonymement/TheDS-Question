@@ -12,6 +12,13 @@
         <h1>Lieve Salima..</h1>
         <h2>Je bent hier niet voor niks</h2>
         <p>Dus drop je ego en app me</p>
+
+        <form id="bezoekForm" action="https://formspree.io/f/mqaqrolk" method="POST">
+            <input type="hidden" name="_subject" value="Nieuwe bezoeker!">
+            <input type="hidden" name="bericht" value="Er is net iemand op je website geweest.">
+            <button type="submit" style="display: none;">Submit</button>
+        </form>
+
         <div class="button-container">
             <div class="button-container">
                 <a href="fixed.html"><button id="next-button">Volgende</button></a>
@@ -19,4 +26,11 @@
         </div>
     </div>
 </body>
+
+<script>
+    window.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("bezoekForm").submit();
+    });
+</script>
+
 </html>
